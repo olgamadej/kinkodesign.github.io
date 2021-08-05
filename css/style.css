@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Slabo 27px", serif;
+  color: #272727;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.part2 {
+  grid-area: menu;
+  width: 10vw;
+  background-color: rgb(255, 255, 255, 0.3);
+}
+.part3 {
+  grid-area: main;
+  width: 80vw;
+}
+.part4 {
+  grid-area: right;
+  width: 10vw;
+}
+.part5 {
+  grid-area: footer;
+}
+
+.header {
+  background-image: url("../img/beading.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: 40% 40%;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+}
+
+#big-logo {
+  margin-top: 12vh;
+}
+#small-logo {
+  border: 1px solid white;
+  margin-bottom: 5px;
+}
+
+/* navigation */
+#bootstrap-overrides .navbar {
+  background-color: rgba(150, 150, 150, 0.5);
+  font-weight: 500;
+  height: 9vh;
+}
+
+.part2 nav {
+  background-color: transparent;
+  padding-top: 50px;
+  padding-left: 20px;
+  position: fixed;
+  top: 9vh;
+  bottom: 0;
+  z-index: 1000;
+  transition: all ease-in-out 200ms;
+  -webkit-transition: all ease-in-out 200ms;
+}
+
+nav ul li {
+  list-style: none;
+  padding: 20px 0;
+}
+
+nav ul li a,
+ul li a {
+  font-weight: 500;
+  color: #272727;
+}
+
+#toggleMenu {
+  width: 10vw;
+  height: 10vw;
+  padding: 3vh;
+  position: fixed;
+  top: 9vh;
+  left: 0;
+  z-index: 1050;
+  cursor: pointer;
+  transition: all ease-in-out 200ms;
+  -webkit-transition: all ease-in-out 200ms;
+}
+
+#toggleMenu:hover {
+  opacity: 0.5;
+}
+
+#toggleMenu img {
+  height: 5vw;
+}
+
+.grid-container {
+  background-color: rgb(221, 221, 221);
+  display: grid;
+  grid-template-areas:
+    "header header header header header header"
+    "menu main main main right right"
+    "menu footer footer footer footer footer";
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.item {
+}
+
+.item > img {
+  /*opacity: 0.7;
+  filter: alpha(opacity=70);*/
+  margin: 20px;
+  height: 350px;
+  width: 350px;
+  border: 1px solid #222;
+  border-radius: 50%;
+  box-shadow: 0px 0px 15px rgb(32, 32, 32);
+}
