@@ -85,8 +85,8 @@ a.nav-item {
   top: 9vh;
   bottom: 0;
   z-index: 1000;
-  transition: all ease-in-out 200ms;
-  -webkit-transition: all ease-in-out 200ms;
+  transition: all ease-in-out 500ms;
+  -webkit-transition: all ease-in-out 500ms;
 }
 
 nav ul li {
