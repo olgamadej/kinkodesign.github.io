@@ -5,10 +5,9 @@
 }
 
 body {
-  font-family: "Slabo 27px", serif;
-  color: #272727;
   overflow-y: scroll;
   overflow-x: hidden;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
 }
 
 .part2 {
@@ -27,7 +26,9 @@ body {
 .part5 {
   grid-area: footer;
 }
-
+a.nav-item {
+  color: aquamarine;
+}
 .header {
   background-image: url("../img/beading.jpg");
   background-attachment: fixed;
@@ -47,11 +48,33 @@ body {
   margin-bottom: 5px;
 }
 
+.header-text {
+  margin: 20px;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(32, 32, 32, 0.3);
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+}
+
+.header-text p {
+  font-size: 22px;
+  font-weight: 500;
+  color: rgb(246, 248, 250);
+}
+
 /* navigation */
 #bootstrap-overrides .navbar {
-  background-color: rgba(150, 150, 150, 0.5);
-  font-weight: 500;
+  background-color: rgba(119, 108, 108, 0.5);
   height: 9vh;
+}
+#bootstrap-overrides .navbar .nav-item {
+  color: white;
+  font-weight: 500;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  font-size: 2rem;
 }
 
 .part2 nav {
@@ -74,7 +97,22 @@ nav ul li {
 nav ul li a,
 ul li a {
   font-weight: 500;
-  color: #272727;
+  color: rgba(251, 251, 251);
+}
+
+nav > #side-menu {
+  padding-top: 5vh;
+}
+nav#menu {
+  background-color: rgba(119, 108, 108, 0.5);
+  font-weight: 500;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  color: rgb(250, 242, 242);
+  font-size: 2rem;
+  width: 10vw;
+  border-right: 1px solid white;
+  transition: all ease-in-out 500ms;
+  -webkit-transition: all ease-in-out 500ms;
 }
 
 #toggleMenu {
@@ -86,16 +124,71 @@ ul li a {
   left: 0;
   z-index: 1050;
   cursor: pointer;
-  transition: all ease-in-out 200ms;
-  -webkit-transition: all ease-in-out 200ms;
+  transition: all ease-in-out 500ms;
+  -webkit-transition: all ease-in-out 500ms;
 }
 
 #toggleMenu:hover {
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
-#toggleMenu img {
-  height: 5vw;
+.menu-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all ease-in-out 500ms;
+  border: 3px solid #fff;
+  border-radius: 7px;
+  box-shadow: 0px 0px 2px rgba(255, 250, 250);
+}
+
+.menu-btn_burger {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 2px rgba(255, 250, 250);
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn_burger::before,
+.menu-btn_burger::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 2px rgba(255, 250, 250);
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn_burger::before {
+  transform: translateY(-10px);
+}
+.menu-btn_burger::after {
+  transform: translateY(10px);
+}
+
+/* ANIMATION */
+.menu-btn.open {
+  border: 3px solid rgba(251, 251, 251, 0.1);
+  box-shadow: 0px 0px 4px rgba(255, 250, 250, 0.2);
+}
+.menu-btn.open .menu-btn_burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+.menu-btn.open .menu-btn_burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .menu-btn_burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
 }
 
 .grid-container {

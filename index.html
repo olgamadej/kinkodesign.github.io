@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <title>Kinko Design</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -30,7 +31,7 @@
                 <!-- Brand and toggle get grouped for better mobile display-->
                 <div class="navbar-header">
                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#li-navbar-collapse-1" aria-expanded="false">
-                    <span ="sr-only">Toggle navigation</span>
+                    <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -50,17 +51,6 @@
                     <li> <a href="#home" class="nav-item">Home <span class="sr-only">(current)</span></a></li>
                     <li> <a href="#about" class="nav-item">About Us</a></li>
                     <li> <a href="#features" class="nav-item">Features</a> </li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More<span class="caret"></span> </a>
-                      <ul class="dropdown-menu">
-                        <li> <a href="#screens" class="nav-item">Screens</a> </li>
-                        <li> <a href="#download" class="nav-item">Download</a> </li>
-                        <li role="separator" class="divider"></li>
-                        <li> <a href="#" class="nav-item">Team | Areas</a> </li>
-                        <li role="separator" class="divider"></li>
-                        <li> <a href="#" class="nav-item">Languages</a> </li>
-                      </ul>
-                    </li>
                     <li> <a href="#contact" class="nav-item">Contact Us</a> </li>
                   </ul>
                   <!-- Search field
@@ -100,26 +90,7 @@
                         
                     </div>
                   </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-8">
-                    <div class="header-text">
-                      <h1> Kinko Design </h1>
-                      <p>Choose a full-of-colors design for yourself or someone special to you!</p>
-                    </div>
-                    <div class="header-btns">
-                        <a class="btn btn-download" href="#">Download</a>
-                        <a class="btn btn-tour" href="#">Take a Tour
-                          <i class="fa fa-angle-down"></i>
-                        </a>
-
-                    </div>
-                  </div>
-                  <div class="col-md-3 col-md-offset-1">
-                    <div class="header-img"> <!-- Na wideo klasa sie nazywa header-iphone. -->
-                      <img src="img/header-img.png" alt="tutaj zdjątko dodać jakieś bez tła dla balansu, nie.">
-                    </div>
-                  </div>
+                </div>  
                 </div>
               </div>
             </div>
@@ -135,14 +106,17 @@
         <div class="part2">
           <!--Teraz dodane-->
           <div id="toggleMenu" onclick="toggleMenu()">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <!-- <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5C0 2.23857 2.23858 0 5 0H19C21.7614 0 24 2.23858 24 5V19C24 21.7614 21.7614 24 19 24H5C2.23857 24 0 21.7614 0 19V5ZM11.5 12L2.74646 3.24643L3.45357 2.53932L12.1869 11.2727L20 3L20.727 3.68662L12.8943 11.9801L20.9607 20.0465L20.2536 20.7536L12.2074 12.7074L3.72701 21.6866L3 21L11.5 12Z" fill="#272727" fill-opacity="0.4"/>
-              </svg>
+          </svg>-->
+          <div class="menu-btn">
+            <div class="menu-btn_burger"></div>
+          </div>
               
         </div>
         <div>
           <nav id="menu">
-            <ul>
+            <ul id="side-menu">
               <li><a href="#">Home</a></li>
               <li><a href="#">Wool</a></li>
               <li><a href="#">Hard Pieces</a></li>
@@ -156,9 +130,11 @@
         </div>
 
         <div class="part3">
-            <h1>Gallery</h1>
+            <h1></h1> <!--Gallery-->
             <div class="grid-wrapper">
-              <p>Zrobic gdzies fadeInLeft wow effect dloni w branzoletkach (przyklad w Business Page 8.8) i tekst z fadeInRight effect </p>
+              <div class="header-text">
+                <p >Choose</p><p>&nbsp a full-of-colors design </p><p> &nbsp &nbsp for yourself </p><p> &nbsp &nbsp &nbsp ...or someone special </p><p> &nbsp &nbsp &nbsp &nbsp to you!</p>
+              </div> 
                 <div class="item"><img src="img/necklace8.jpg" alt="Something is wrong..." height="400px" width="400px"></div>
 
                 <div class="item"><img src="img/bracelet8.jpg" alt="Something is wrong..." height="400px" width="400px"></div>
@@ -182,27 +158,19 @@
 
                 
             </div>
+            <!--
             <div class="slider">
               <div><img src="img/slide1.jpg" alt=""></div>
               <div><img src="img/slide2.jpg" alt=""></div>
           </div>
+          -->
         </div>
 
-        <div class="part4">Right</div>
+        <div class="part4"></div> <!--Right-->
 
-        <div class="part5">Footer</div>
+        <div class="part5"></div><!--Footer-->
     </div>
-    <script>
-      var toggleStatus = 1;
-      function toggleMenu() {
-        if (toggleStatus == 1) {
-          document.getElementById("menu").style.left = "-10vw";
-          toggleStatus = 0;
-        } else if (toggleStatus == 0) {
-          document.getElementById("menu").style.left = "0";
-          toggleStatus =  1;
-        }
-      }
-    </script>
+    
+    <script src="js/main.js"></script>
 </body>
 </html>
