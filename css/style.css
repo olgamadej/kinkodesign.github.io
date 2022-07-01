@@ -206,17 +206,23 @@ nav#menu {
   grid-gap: 5px;
   grid-auto-rows: minmax(100px, auto);
 }
-
 .item {
 }
 
 .item > img {
-  /*opacity: 0.7;
-  filter: alpha(opacity=70);*/
+  opacity: 0.7;
+  filter: alpha(opacity=70);
   margin: 20px;
   height: 350px;
   width: 350px;
   border: 1px solid #222;
   border-radius: 50%;
   box-shadow: 0px 0px 15px rgb(32, 32, 32);
+}
+
+/*Media Queries*/
+@media screen and (max-width: 992px) {
+}
+
+@media screen and (max-width: 600px) {
 }
