@@ -224,7 +224,6 @@ nav#menu {
 /*Media Queries*/
 
 @media screen and (max-width: 1300px) {
-  .header-text,
   .item {
     display: flex;
     align-items: center;
@@ -242,12 +241,19 @@ nav#menu {
 }
 
 @media screen and (max-width: 992px) {
+  #big-logo {
+    width: 550px;
+  }
   .grid-wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (max-width: 772px) {
+  #big-logo {
+    width: 420px;
+  }
+
   .header-text,
   .item > img {
     margin: 5px;
@@ -260,6 +266,9 @@ nav#menu {
 }
 
 @media screen and (max-width: 600px) {
+  #big-logo {
+    width: 300px;
+  }
   .grid-wrapper {
     grid-template-columns: repeat(1, 1fr);
   }
